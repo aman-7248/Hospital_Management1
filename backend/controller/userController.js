@@ -222,5 +222,5 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
       success: true,
       message: "Patient Logged Out Successfully.",
     });
-  });
+});
 
