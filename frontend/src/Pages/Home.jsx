@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import Hero from "../components/Hero";
-
+import Biography from "../components/Biography";
 
 const Home = () => {
   return (
@@ -11,6 +11,7 @@ const Home = () => {
         }
         imageUrl={"/hero.png"}
       />
+      <Biography imageUrl={"/about.png"} />
     </>
   );
 };
