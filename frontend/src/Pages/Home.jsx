@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import Hero from "../components/Hero";
 import Biography from "../components/Biography";
 import Departments from "../components/Departments";
+import MessageForm from "../components/MessageForm";
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       />
       <Biography imageUrl={"/about.png"} />
       <Departments />
+      <MessageForm />
     </>
   );
 };
