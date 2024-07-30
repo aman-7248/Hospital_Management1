@@ -6,4 +6,4 @@ const AddNewDoctor = () => {
   )
 }
 
-export default AddNewDoctor
+export default AddNewDoctor;

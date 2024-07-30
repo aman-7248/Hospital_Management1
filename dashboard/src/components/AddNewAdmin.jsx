@@ -6,4 +6,4 @@ const AddNewAdmin = () => {
   )
 }
 
-export default AddNewAdmin
+export default AddNewAdmin;
