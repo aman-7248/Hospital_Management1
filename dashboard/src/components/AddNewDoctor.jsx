@@ -27,6 +27,7 @@ const AddNewDoctor = () => {
     "Radiology",
     "Physical Therapy",
     "Dermatology",
+    "Hematology",
     "ENT",
   ];
 
