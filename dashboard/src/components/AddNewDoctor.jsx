@@ -15,6 +15,15 @@ const AddNewDoctor = () => {
   const [docAvatarPreview, setDocAvatarPreview] = useState("");
   const navigateTo = useNavigate();
 
+  const handleAvatar = (e) => {
+    const file = e.target.files[0];
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      setDocAvatarPreview(reader.result);
+      setDocAvatar(file);
+    };
+  };
   const handleAddNewDoctor = async (e) => {
     e.preventDefault();
     try {
@@ -54,6 +63,7 @@ const AddNewDoctor = () => {
   if (!isAuthenticated) {
     return <Navigate to={"/login"} />;
   }
+
   return <div>AddNewDoctor</div>;
 };
 export default AddNewDoctor;
