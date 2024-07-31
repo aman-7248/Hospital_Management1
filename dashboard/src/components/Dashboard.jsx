@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../main";
 import axios from "axios";
+import { Navigate } from "react-router-dom";
 
 const Dashboard = () => {
   const [appointments, setAppointments] = useState([]);
@@ -63,6 +64,18 @@ const Dashboard = () => {
                 <th>Visited</th>
               </tr>
             </thead>
+            <tbody>
+              {appointments && appointments.length > 0
+                ? appointments.map((appointment) => (
+                    <tr key={appointment._id}>
+                      <td>{`${appointment.firstName} ${appointment.lastName}`}</td>
+                      <td>{appointment.appointment_date.substring(0, 16)}</td>
+                      <td>{`${appointment.doctor.firstName} ${appointment.doctor.lastName}`}</td>
+                      <td>{appointment.department}</td>
+                    </tr>
+                  ))
+                : "No Appointments Found!"}
+            </tbody>
           </table>
 
           {}
