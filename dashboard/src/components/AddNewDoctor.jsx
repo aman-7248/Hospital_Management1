@@ -15,6 +15,18 @@ const AddNewDoctor = () => {
   const [docAvatarPreview, setDocAvatarPreview] = useState("");
   const navigateTo = useNavigate();
 
+  const departmentsArray = [
+    "Pediatrics",
+    "Orthopedics",
+    "Cardiology",
+    "Neurology",
+    "Oncology",
+    "Radiology",
+    "Physical Therapy",
+    "Dermatology",
+    "ENT",
+  ];
+
   const handleAvatar = (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
