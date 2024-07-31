@@ -51,6 +51,9 @@ const AddNewDoctor = () => {
       toast.error(error.response.data.message);
     }
   };
+  if (!isAuthenticated) {
+    return <Navigate to={"/login"} />;
+  }
   return <div>AddNewDoctor</div>;
 };
 export default AddNewDoctor;
