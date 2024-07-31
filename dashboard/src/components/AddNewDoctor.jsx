@@ -64,6 +64,63 @@ const AddNewDoctor = () => {
     return <Navigate to={"/login"} />;
   }
 
-  return <div>AddNewDoctor</div>;
+  return (
+    <section className="page">
+      <section className="container add-doctor-form">
+        <img src="/logo.png" alt="logo" className="logo" />
+        <h1 className="form-title">REGISTER A NEW DOCTOR</h1>
+        <form onSubmit={handleAddNewDoctor}>
+          <div className="first-wrapper">
+            <div>
+              <img
+                src={
+                  docAvatarPreview ? `${docAvatarPreview}` : "/docHolder.jpg"
+                }
+                alt="Doctor Avatar"
+              />
+              <input type="file" onChange={handleAvatar} />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="First Name"
+                value={firstName}
+                onChange={(e) => setFirstName(e.target.value)}
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                value={lastName}
+                onChange={(e) => setLastName(e.target.value)}
+              />
+
+              <input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+              <select
+                value={doctorDepartment}
+                onChange={(e) => {
+                  setDoctorDepartment(e.target.value);
+                }}
+              >
+                <option value="">Select Department</option>
+                {departmentsArray.map((depart, index) => {
+                  return (
+                    <option value={depart} key={index}>
+                      {depart}
+                    </option>
+                  );
+                })}
+              </select>
+              <button type="submit">Register New Doctor</button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </section>
+  );
 };
 export default AddNewDoctor;
