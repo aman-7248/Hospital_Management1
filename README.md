@@ -1,2 +1,1 @@
-# Hospital_Management1
-This hospital management is a comprehensive, user-friendly web application designed to streamline the operations of a hospital or medical facility.
+Hospital Management System Website is a web-based application developed to streamline hospital operations and enhance patient care. It allows administrators, doctors, and patients to interact through a user-friendly interface. The system includes features such as patient registration, appointment booking, doctor management, billing, medical records handling, and prescription tracking.
